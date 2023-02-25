@@ -6,18 +6,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.w2dwm.app.domain.Student;
+import com.w2dwm.app.domain.User;
 
-@RestController()
-public interface IMainController {
+@RestController("/user")
+public interface IUserController {
 
 	@GetMapping("/ping")
 	public String ping();
 	
-	@PostMapping("/ping")
-	public Student createStudnet(Student student);
+	@PostMapping("/create")
+	public User createUser(User student);
 
-	@GetMapping("get-all-student")
-	public List<Student> getAllStudent();
+	@GetMapping("/get-all-user")
+	public List<User> getAllUser();
 
 }
